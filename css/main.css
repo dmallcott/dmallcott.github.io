@@ -1,3 +1,18 @@
+body {
+	background-color: #374753;
+	overflow:hidden;
+}
+
+h1 {
+	font-size: 3.5em !important;
+	color: white !important;
+}
+
+p {
+	font-size: 1.5em !important;
+	color: white;
+}
+
 .full-screen {
 	width: 100%;
 	height: 100%;
@@ -21,15 +36,10 @@
 	min-height: 100%;
 }
 
-body {
-	background-color: #374753;
-	overflow:hidden;
-}
-
 #logo {
-	width: 25%;
-	height: 25%;
-	margin-right: 75%;
+	width: 20%;
+	height: 20%;
+	margin-right: 80%;
 	margin-bottom: 10%;
 	float: left;
 }
@@ -42,9 +52,55 @@ body {
 	background-image: url(../assets/img/test.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-    background-position: center;
+	background-position: center;
 }
 
-#main_row {
-	padding: 10%;
+#background {
+	position: absolute;
+}
+
+#overlay {
+	position: absolute;
+	background-color: #374753;
+	opacity: 0.4;
+}
+
+#image {
+	background-image: url(../assets/img/backgroundFlipped.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+}
+
+@media only screen and (max-width : 991px) {
+
+	#image {
+		background-image: url(../assets/img/test.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+		position: absolute;
+	}
+}
+
+@media only screen and (min-width : 992px) {
+
+	#image {
+		background-image: url(../assets/img/backgroundFlipped.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+	}
+}
+
+#icons_bar {
+	text-align: center;
+}
+
+#icons_bar > a > .icon {
+	height: 3em;
+	width: 3em;
+	margin: 1em;
 }

@@ -1,14 +1,22 @@
+@font-face {
+	font-family: Mosk;
+	src: url('../assets/fonts/Mosk.ttf');
+}
+
 body {
 	background-color: #374753;
 	overflow:hidden;
 }
 
 h1 {
+	font-family: 'Mosk', sans-serif !important;
 	font-size: 3.5em !important;
 	color: white !important;
+	margin-bottom: 0.4em !important;;
 }
 
 p {
+	font-family: 'Lato', sans-serif !important;
 	font-size: 1.5em !important;
 	color: white;
 }
@@ -36,23 +44,8 @@ p {
 	min-height: 100%;
 }
 
-#logo {
-	width: 20%;
-	height: 20%;
-	margin-right: 80%;
-	margin-bottom: 10%;
-	float: left;
-}
-
-#me {
-	width: auto;
-	height: 80%;
-	padding-top: 10%;
-	padding-bottom: 10%;
-	background-image: url(../assets/img/test.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+.container-fluid {
+	padding: 0 !important;
 }
 
 #background {
@@ -66,33 +59,20 @@ p {
 }
 
 #image {
-	background-image: url(../assets/img/backgroundFlipped.jpg);
+	background-image: url(../assets/img/background_phones.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: right;
 	position: absolute;
 }
 
-@media only screen and (max-width : 991px) {
-
-	#image {
-		background-image: url(../assets/img/test.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: right;
-		position: absolute;
-	}
+#main_row {
+	text-align: center;
 }
 
-@media only screen and (min-width : 992px) {
-
-	#image {
-		background-image: url(../assets/img/backgroundFlipped.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		position: absolute;
-	}
+#logo {
+	width: 12em;
+	margin: 1em;
 }
 
 #icons_bar {
@@ -103,4 +83,20 @@ p {
 	height: 3em;
 	width: 3em;
 	margin: 1em;
+}
+
+@media only screen and (min-width : 1200px) {
+
+	#main_row {
+		text-align: left;
+	}
+
+	#logo {
+		text-align: left;
+	}
+
+	#image {
+		background-image: url(../assets/img/background.jpg);
+		background-position: center;
+	}
 }

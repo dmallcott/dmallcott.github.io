@@ -5,7 +5,7 @@
 
 body {
 	background-color: #374753;
-	overflow:hidden;
+	overflow: auto !important;
 }
 
 h1 {
@@ -24,19 +24,13 @@ p {
 .full-screen {
 	width: 100%;
 	height: 100%;
-}
-
-.vertical-align {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	min-height: 100%;
 }
 
 .horizontal-align {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-
 }
 
 .fill {
@@ -49,7 +43,7 @@ p {
 }
 
 #background {
-	position: absolute;
+	position: fixed;
 }
 
 #overlay {
@@ -67,7 +61,8 @@ p {
 }
 
 #main_row {
-	text-align: center;
+	text-align: left;
+	margin-bottom: 2em;
 }
 
 #logo {
@@ -87,10 +82,6 @@ p {
 
 @media only screen and (min-width : 1200px) {
 
-	#main_row {
-		text-align: left;
-	}
-
 	#logo {
 		text-align: left;
 	}
@@ -98,5 +89,15 @@ p {
 	#image {
 		background-image: url(../assets/img/background.jpg);
 		background-position: center;
+	}
+}
+
+
+@media only screen and (min-height: 800px) {
+
+	.vertical-align {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
